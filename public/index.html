@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treemap Imobiliário</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #infoBox {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid black;
+      padding: 10px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label for="periodo">Período:</label>
+    <select id="periodo">
+      <option value="all">Todos</option>
+      <option value="last-30">Últimos 30 dias</option>
+      <option value="last-90">Últimos 90 dias</option>
+      <option value="last-year">Último ano</option>
+    </select>
+    
+    <label for="valor">Valor:</label>
+    <select id="valor">
+      <option value="all">Todos</option>
+      <option value="0-100k">Até 100k</option>
+      <option value="100k-500k">100k - 500k</option>
+      <option value="500k+">Acima de 500k</option>
+    </select>
+    
+    <label for="area">Área:</label>
+    <select id="area">
+      <option value="all">Todas</option>
+      <option value="0-50">Até 50m²</option>
+      <option value="50-100">50m² a 100m²</option>
+      <option value="100+">Acima de 100m²</option>
+    </select>
+  </div>
+  
+  <div id="grafico"></div>
+
+  <div id="infoBox"></div>
+  
+  <script src="/main.js"></script>
+</body>
+</html>
