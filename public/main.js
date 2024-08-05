@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
   function filtrarDados(dados, periodo, valor, area) {
     console.log('Filtrando dados:', dados);
     
-    // Cria novas instâncias de Date para cada filtro
     const agora = new Date();
+    
     const filtroPeriodo = {
       'all': () => true,
       'last-30': item => {
